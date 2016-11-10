@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonBackMenu = new System.Windows.Forms.Button();
             this.button1CreateAccountAccess = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxRespeatPassword = new System.Windows.Forms.TextBox();
             this.label3RepeatPassword = new System.Windows.Forms.Label();
             this.label2Password = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox2Email = new System.Windows.Forms.TextBox();
             this.label1Email = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1UserName = new System.Windows.Forms.Label();
@@ -47,11 +47,11 @@
             // 
             this.panel1.Controls.Add(this.buttonBackMenu);
             this.panel1.Controls.Add(this.button1CreateAccountAccess);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBoxPassword);
+            this.panel1.Controls.Add(this.textBoxRespeatPassword);
             this.panel1.Controls.Add(this.label3RepeatPassword);
             this.panel1.Controls.Add(this.label2Password);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox2Email);
             this.panel1.Controls.Add(this.label1Email);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1UserName);
@@ -88,20 +88,20 @@
             this.button1CreateAccountAccess.UseVisualStyleBackColor = false;
             this.button1CreateAccountAccess.Click += new System.EventHandler(this.button1CreateAccountAccess_Click);
             // 
-            // textBox4
+            // textBoxPassword
             // 
-            this.textBox4.Location = new System.Drawing.Point(224, 145);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = 'a';
-            this.textBox4.Size = new System.Drawing.Size(221, 22);
-            this.textBox4.TabIndex = 5;
+            this.textBoxPassword.Location = new System.Drawing.Point(224, 145);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = 'a';
+            this.textBoxPassword.Size = new System.Drawing.Size(221, 22);
+            this.textBoxPassword.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxRespeatPassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(224, 187);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 22);
-            this.textBox5.TabIndex = 5;
+            this.textBoxRespeatPassword.Location = new System.Drawing.Point(224, 187);
+            this.textBoxRespeatPassword.Name = "textBoxRespeatPassword";
+            this.textBoxRespeatPassword.Size = new System.Drawing.Size(221, 22);
+            this.textBoxRespeatPassword.TabIndex = 5;
             // 
             // label3RepeatPassword
             // 
@@ -125,12 +125,12 @@
             this.label2Password.TabIndex = 4;
             this.label2Password.Text = "Password";
             // 
-            // textBox2
+            // textBox2Email
             // 
-            this.textBox2.Location = new System.Drawing.Point(224, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 22);
-            this.textBox2.TabIndex = 3;
+            this.textBox2Email.Location = new System.Drawing.Point(224, 109);
+            this.textBox2Email.Name = "textBox2Email";
+            this.textBox2Email.Size = new System.Drawing.Size(221, 22);
+            this.textBox2Email.TabIndex = 3;
             // 
             // label1Email
             // 
@@ -197,11 +197,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxRespeatPassword;
         private System.Windows.Forms.Label label3RepeatPassword;
         private System.Windows.Forms.Label label2Password;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox2Email;
         private System.Windows.Forms.Label label1Email;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1UserName;
