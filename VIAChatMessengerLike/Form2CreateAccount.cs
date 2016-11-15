@@ -18,20 +18,12 @@ namespace VIAChatMessengerLike
 {
     public partial class Form2CreateAccount : Form
     {
-        // Should reference to the InformationLibray(User) and also the LogicLibray
-
-        // Storage for IDENTITY values returned from database, information object
+        /// <summary>
+        ///  Class userInformation adn Operations
+        /// </summary>
         public UserInformations info = new UserInformations();
-
-        // I implement the 3 tier application so all this has been moved to Information
-        //private string username;
-        //private string parsedMessageID;
-        //private string password;
-
+         public LogicOperations opr = new LogicOperations();
        
-        public Operations opr = new Operations();
-        // Connetion string
-        //private string connectionstring = VIAChatMessengerLike.Utility.GetConnectionString();
 
         public Form2CreateAccount()
         {
@@ -42,22 +34,44 @@ namespace VIAChatMessengerLike
         {
 
         }
-
-        // Create account
+        
+        /// <summary>
+        /// Creatred account for the user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1CreateAccountAccess_Click(object sender, EventArgs e)
         {
           
-            info.email = textBox2Email.Text;
-            info.password = textBoxPassword.Text;
-            info.userName = textBox1UserName.Text;
+           
 
-            int rows = opr.insertNewUserData(info);
 
-            if (rows > 0)
+            if (textBox1UserName.Text.Trim().Equals(' '))
             {
-                MessageBox.Show("Data Served");
+                MessageBox.Show("Data username or password can not be black");
             }
 
+            else
+            {
+                 info.email = textBox2Email.Text;
+                info.password = textBoxPassword.Text;
+                info.userName = textBox1UserName.Text;
+
+                int rows = opr.insertNewUserData(info);
+
+                if (rows > 0)
+                {
+                    MessageBox.Show("Data Served");
+                    this.Close();
+                    MainForm1OnStart form1OnStart = new MainForm1OnStart();
+                    form1OnStart.Show();
+                }
+                else
+                {
+                    MessageBox.Show("User data not saved");
+                }
+            }
+            
            
         }
 
@@ -68,6 +82,7 @@ namespace VIAChatMessengerLike
 
         private void button1BackToMenu(object sender, EventArgs e)
         {
+            this.Close();
             MainForm1OnStart form1OnStart = new MainForm1OnStart();
             form1OnStart.Show();
             this.Close();

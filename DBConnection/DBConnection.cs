@@ -9,7 +9,10 @@ namespace DataBaseAccessLibray
         public SqlConnection conn = new SqlConnection(@"Data Source=desktop-36vt444\sqlexpress;Initial Catalog=chatfinalmessenger;Integrated Security=True");
 
 
-        // Connection
+        /// <summary>
+        /// For getting connection
+        /// </summary>
+        /// <returns></returns>
         public SqlConnection getConnection()
         {
             if (conn.State == ConnectionState.Closed)
@@ -21,7 +24,13 @@ namespace DataBaseAccessLibray
             return conn;
         }
 
-
+        /// <summary>
+        /// For inserting purpose it can also be used for update or delete
+        /// </summary>
+        /// <param name="cmd">
+        /// Sql command using for preparing an SQL statement-StoredProcedure that be excute on SQL Server database
+        /// </param>
+        /// <returns></returns>
         public int ExeNonQuery(SqlCommand cmd)
         {
             cmd.Connection = getConnection();
@@ -34,8 +43,12 @@ namespace DataBaseAccessLibray
         }
 
 
-        // Retriving value from dabase single on
-
+        /// <summary>
+        /// Returning a single -scalar value
+        /// If return total number of rows in a table
+        /// </summary>
+        /// <param name="cmd"></param>
+        /// <returns></returns>
         public object ExeScalar(SqlCommand cmd)
         {
             cmd.Connection = getConnection();
@@ -46,7 +59,13 @@ namespace DataBaseAccessLibray
         }
 
 
-        // Selecting Query using ExeReader
+        /// <summary>
+        /// Returns more than a single value i.e number of rows of data
+        /// </summary>
+        /// <param name="cmd"></param>
+        /// <returns>
+        /// rows of data
+        /// </returns>
         public DataTable ExeReader(SqlCommand cmd)
         {
             cmd.Connection = getConnection();

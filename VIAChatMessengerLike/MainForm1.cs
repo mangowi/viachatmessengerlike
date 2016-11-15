@@ -15,10 +15,12 @@ namespace VIAChatMessengerLike
     public partial class MainForm1OnStart : Form
     {
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public UserInformations info = new UserInformations();
 
-        public Operations opr = new Operations();
+        public LogicOperations opr = new LogicOperations();
         DataTable dataTable = new DataTable();
 
         public string typeUser;
@@ -35,7 +37,8 @@ namespace VIAChatMessengerLike
         
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        {   
+            this.Hide();
             Form2CreateAccount form2CreateAccount = new Form2CreateAccount();
             form2CreateAccount.Show();
         }
@@ -48,26 +51,28 @@ namespace VIAChatMessengerLike
             dataTable= opr.loginUser(info);
             if (dataTable.Rows.Count > 0)
             {
+
+
                 typeUser = dataTable.Rows[0][3].ToString().Trim();
                 if (typeUser=="A")
                 {
+                    this.Hide();
                     Form1AdminServer form1Admin = new Form1AdminServer();
                     form1Admin.Show();
                     MessageBox.Show(dataTable.Rows[0][1].ToString());
-                    this.Hide();
+                   
 
                 }
                 else
                 {
                     // Take to Chart
+                    this.Hide();
                 Form3ChatArea form3Chat = new Form3ChatArea();
                 form3Chat.Show();
-                this.Close();
+                
             }
 
-            }
-                
-            else
+            }   else
             {
                 MessageBox.Show("User name not found in our database");
             }

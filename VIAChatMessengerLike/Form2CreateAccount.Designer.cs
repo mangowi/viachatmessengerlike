@@ -138,15 +138,15 @@
             this.label1Email.AutoSize = true;
             this.label1Email.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1Email.ForeColor = System.Drawing.Color.White;
-            this.label1Email.Location = new System.Drawing.Point(78, 105);
+            this.label1Email.Location = new System.Drawing.Point(73, 81);
             this.label1Email.Name = "label1Email";
-            this.label1Email.Size = new System.Drawing.Size(58, 25);
+            this.label1Email.Size = new System.Drawing.Size(138, 50);
             this.label1Email.TabIndex = 2;
-            this.label1Email.Text = "Email";
+            this.label1Email.Text = "       Email\r\n(ex. w@w.com)";
             // 
             // textBox1UserName
             // 
-            this.textBox1UserName.Location = new System.Drawing.Point(224, 62);
+            this.textBox1UserName.Location = new System.Drawing.Point(224, 30);
             this.textBox1UserName.Name = "textBox1UserName";
             this.textBox1UserName.Size = new System.Drawing.Size(221, 22);
             this.textBox1UserName.TabIndex = 1;
@@ -154,13 +154,13 @@
             // label1UserName
             // 
             this.label1UserName.AutoSize = true;
-            this.label1UserName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1UserName.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.label1UserName.ForeColor = System.Drawing.Color.White;
-            this.label1UserName.Location = new System.Drawing.Point(78, 58);
+            this.label1UserName.Location = new System.Drawing.Point(73, 11);
             this.label1UserName.Name = "label1UserName";
-            this.label1UserName.Size = new System.Drawing.Size(105, 25);
+            this.label1UserName.Size = new System.Drawing.Size(95, 46);
             this.label1UserName.TabIndex = 0;
-            this.label1UserName.Text = "User Name";
+            this.label1UserName.Text = "User Name\r\n (ex. wewe)";
             this.label1UserName.Click += new System.EventHandler(this.label1UserName_Click);
             // 
             // label1CreateAccount

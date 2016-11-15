@@ -40,7 +40,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1UserNameDisplay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1Left.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1Left.Name = "menuStrip1Left";
-            this.menuStrip1Left.Size = new System.Drawing.Size(96, 405);
+            this.menuStrip1Left.Size = new System.Drawing.Size(98, 405);
             this.menuStrip1Left.TabIndex = 0;
             this.menuStrip1Left.Text = "menuStrip1";
             this.menuStrip1Left.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -87,49 +87,50 @@
             // 
             this.messagesToolStripMenuItem.Enabled = false;
             this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
-            this.messagesToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.messagesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.messagesToolStripMenuItem.Text = "Messages";
             // 
             // unreadToolStripMenuItem
             // 
             this.unreadToolStripMenuItem.Name = "unreadToolStripMenuItem";
-            this.unreadToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.unreadToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.unreadToolStripMenuItem.Text = "Unread";
             // 
             // readToolStripMenuItem
             // 
             this.readToolStripMenuItem.Name = "readToolStripMenuItem";
-            this.readToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.readToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.readToolStripMenuItem.Text = "Read";
             // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.accountToolStripMenuItem.Text = "Drafts";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.closeToolStripMenuItem.Text = "Close";
             // 
             // contextMenuStrip1
@@ -137,16 +138,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label1
+            // label1UserNameDisplay
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(105, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Inbox";
+            this.label1UserNameDisplay.AutoSize = true;
+            this.label1UserNameDisplay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1UserNameDisplay.ForeColor = System.Drawing.Color.White;
+            this.label1UserNameDisplay.Location = new System.Drawing.Point(105, 43);
+            this.label1UserNameDisplay.Name = "label1UserNameDisplay";
+            this.label1UserNameDisplay.Size = new System.Drawing.Size(0, 25);
+            this.label1UserNameDisplay.TabIndex = 1;
             // 
             // panel1
             // 
@@ -260,10 +260,10 @@
             this.Controls.Add(this.textBox2MessageToSend);
             this.Controls.Add(this.button1SendMessageSuccess);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label1UserNameDisplay);
             this.Controls.Add(this.panel1Menu);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form3ChatArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VIA Chat Messenger";
@@ -291,7 +291,7 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label1UserNameDisplay;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2UserNameDiply;
         private System.Windows.Forms.TextBox textBox2;

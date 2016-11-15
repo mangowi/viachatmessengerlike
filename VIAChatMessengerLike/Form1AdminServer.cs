@@ -21,11 +21,17 @@ namespace VIAChatMessengerLike
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Displaying all users in the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ViewUsers viewUsers = new ViewUsers();
             viewUsers.MdiParent = this;
-                viewUsers.Show();
+            viewUsers.Show();
         }
     }
 }

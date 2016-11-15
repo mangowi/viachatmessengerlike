@@ -8,10 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Important
+using InformationLibrary;
+using LogicLibrary;
+
 namespace VIAChatMessengerLike
 {
     public partial class Form3ChatArea : Form
     {
+
+        /// <summary>
+        ///  Class userInformation adn Operations
+        /// </summary>
+        public UserInformations info = new UserInformations();
+        public LogicOperations opr = new LogicOperations();
         public Form3ChatArea()
         {
             InitializeComponent();
@@ -28,6 +38,12 @@ namespace VIAChatMessengerLike
         }
 
         private void Form3ChatArea_Load(object sender, EventArgs e)
+        {
+            label1UserNameDisplay.Text = info.userName;
+          
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

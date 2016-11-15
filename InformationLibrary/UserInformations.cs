@@ -4,8 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+///  Namespace Information Library that has the UserInformation and Message information
+/// </summary>
 namespace InformationLibrary
 {
+    /// <summary>
+    ///  Class UserInformation
+    /// </summary>
     public class UserInformations
     {
 
@@ -18,6 +25,10 @@ namespace InformationLibrary
 
     }
 
+
+    /// <summary>
+    /// Class Message
+    /// </summary>
     public class Message
 
     {

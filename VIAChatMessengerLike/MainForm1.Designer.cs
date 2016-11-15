@@ -42,6 +42,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1LoginSucess = new System.Windows.Forms.Button();
             this.linkLabel1ToCreateAccount = new System.Windows.Forms.LinkLabel();
+            this.label5Username = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +88,7 @@
             this.button1SignVIACredentials.Name = "button1SignVIACredentials";
             this.button1SignVIACredentials.Size = new System.Drawing.Size(356, 53);
             this.button1SignVIACredentials.TabIndex = 3;
-            this.button1SignVIACredentials.Text = "            VIA Credentials";
+            this.button1SignVIACredentials.Text = "            VIA Web";
             this.button1SignVIACredentials.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -125,19 +127,18 @@
             // textBox1UserName
             // 
             this.textBox1UserName.Font = new System.Drawing.Font("Segoe UI Light", 14.25F);
-            this.textBox1UserName.Location = new System.Drawing.Point(510, 227);
+            this.textBox1UserName.Location = new System.Drawing.Point(572, 227);
             this.textBox1UserName.Multiline = true;
             this.textBox1UserName.Name = "textBox1UserName";
-            this.textBox1UserName.Size = new System.Drawing.Size(332, 32);
+            this.textBox1UserName.Size = new System.Drawing.Size(270, 32);
             this.textBox1UserName.TabIndex = 1;
-            this.textBox1UserName.Text = "User Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("hanken round", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(503, 118);
+            this.label3.Location = new System.Drawing.Point(473, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 44);
             this.label3.TabIndex = 5;
@@ -148,7 +149,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 10F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(506, 173);
+            this.label4.Location = new System.Drawing.Point(486, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 19);
             this.label4.TabIndex = 5;
@@ -157,20 +158,19 @@
             // textBox2Password
             // 
             this.textBox2Password.Font = new System.Drawing.Font("Segoe UI Light", 14.25F);
-            this.textBox2Password.Location = new System.Drawing.Point(510, 293);
+            this.textBox2Password.Location = new System.Drawing.Point(572, 293);
             this.textBox2Password.Multiline = true;
             this.textBox2Password.Name = "textBox2Password";
             this.textBox2Password.PasswordChar = '*';
-            this.textBox2Password.Size = new System.Drawing.Size(332, 32);
+            this.textBox2Password.Size = new System.Drawing.Size(270, 32);
             this.textBox2Password.TabIndex = 6;
-            this.textBox2Password.Text = "password";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(510, 358);
+            this.checkBox1.Location = new System.Drawing.Point(490, 358);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(114, 21);
             this.checkBox1.TabIndex = 7;
@@ -197,13 +197,35 @@
             this.linkLabel1ToCreateAccount.AutoSize = true;
             this.linkLabel1ToCreateAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1ToCreateAccount.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1ToCreateAccount.Location = new System.Drawing.Point(664, 173);
+            this.linkLabel1ToCreateAccount.Location = new System.Drawing.Point(655, 173);
             this.linkLabel1ToCreateAccount.Name = "linkLabel1ToCreateAccount";
             this.linkLabel1ToCreateAccount.Size = new System.Drawing.Size(90, 21);
             this.linkLabel1ToCreateAccount.TabIndex = 9;
             this.linkLabel1ToCreateAccount.TabStop = true;
             this.linkLabel1ToCreateAccount.Text = "Create one";
             this.linkLabel1ToCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label5Username
+            // 
+            this.label5Username.AutoSize = true;
+            this.label5Username.Font = new System.Drawing.Font("Segoe UI", 12.25F);
+            this.label5Username.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5Username.Location = new System.Drawing.Point(477, 213);
+            this.label5Username.Name = "label5Username";
+            this.label5Username.Size = new System.Drawing.Size(89, 46);
+            this.label5Username.TabIndex = 1;
+            this.label5Username.Text = "Username\r\n ( ex.  joe )\r\n";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12.25F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(486, 299);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 23);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Password";
             // 
             // MainForm1OnStart
             // 
@@ -214,6 +236,8 @@
             this.Controls.Add(this.linkLabel1ToCreateAccount);
             this.Controls.Add(this.button1LoginSucess);
             this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label5Username);
             this.Controls.Add(this.textBox2Password);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -247,6 +271,8 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1LoginSucess;
         private System.Windows.Forms.LinkLabel linkLabel1ToCreateAccount;
+        private System.Windows.Forms.Label label5Username;
+        private System.Windows.Forms.Label label5;
     }
 }
 

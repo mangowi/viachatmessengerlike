@@ -13,7 +13,7 @@ namespace VIAChatMessengerLike
 {
     public partial class ViewUsers : Form
     {
-        public Operations operations = new Operations();
+        public LogicOperations operations = new LogicOperations();
         public UserInformations userInformations = new UserInformations();
         public ViewUsers()
         {
