@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users_Table>
+  <users>
+    <username>testmangowi</username>
+    <email>testdaniel@example.com</email>
+    <password>testmangowi</password>
+  </users>
+  <users>
+    <username>testtheo</username>
+    <email>testtheo@example.com</email>
+    <password>testtheo</password>
+  </users>
+</Users_Table>

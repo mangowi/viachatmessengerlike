@@ -37,7 +37,7 @@
             this.label2Password = new System.Windows.Forms.Label();
             this.textBox2Email = new System.Windows.Forms.TextBox();
             this.label1Email = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox1UserName = new System.Windows.Forms.TextBox();
             this.label1UserName = new System.Windows.Forms.Label();
             this.label1CreateAccount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.label2Password);
             this.panel1.Controls.Add(this.textBox2Email);
             this.panel1.Controls.Add(this.label1Email);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox1UserName);
             this.panel1.Controls.Add(this.label1UserName);
             this.panel1.Location = new System.Drawing.Point(256, 91);
             this.panel1.Name = "panel1";
@@ -92,7 +92,7 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(224, 145);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = 'a';
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(221, 22);
             this.textBoxPassword.TabIndex = 5;
             // 
@@ -100,6 +100,7 @@
             // 
             this.textBoxRespeatPassword.Location = new System.Drawing.Point(224, 187);
             this.textBoxRespeatPassword.Name = "textBoxRespeatPassword";
+            this.textBoxRespeatPassword.PasswordChar = '*';
             this.textBoxRespeatPassword.Size = new System.Drawing.Size(221, 22);
             this.textBoxRespeatPassword.TabIndex = 5;
             // 
@@ -143,12 +144,12 @@
             this.label1Email.TabIndex = 2;
             this.label1Email.Text = "Email";
             // 
-            // textBox1
+            // textBox1UserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBox1UserName.Location = new System.Drawing.Point(224, 62);
+            this.textBox1UserName.Name = "textBox1UserName";
+            this.textBox1UserName.Size = new System.Drawing.Size(221, 22);
+            this.textBox1UserName.TabIndex = 1;
             // 
             // label1UserName
             // 
@@ -183,10 +184,11 @@
             this.Controls.Add(this.label1CreateAccount);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VIA Chat Messenger";
+            this.Load += new System.EventHandler(this.Form2CreateAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -203,7 +205,7 @@
         private System.Windows.Forms.Label label2Password;
         private System.Windows.Forms.TextBox textBox2Email;
         private System.Windows.Forms.Label label1Email;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox1UserName;
         private System.Windows.Forms.Label label1UserName;
         private System.Windows.Forms.Label label1CreateAccount;
         private System.Windows.Forms.Button button1CreateAccountAccess;

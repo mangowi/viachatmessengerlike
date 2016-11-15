@@ -131,7 +131,6 @@
             this.textBox1UserName.Size = new System.Drawing.Size(332, 32);
             this.textBox1UserName.TabIndex = 1;
             this.textBox1UserName.Text = "User Name";
-            this.textBox1UserName.TextChanged += new System.EventHandler(this.textBox1UserName_TextChanged);
             // 
             // label3
             // 
@@ -143,7 +142,6 @@
             this.label3.Size = new System.Drawing.Size(106, 44);
             this.label3.TabIndex = 5;
             this.label3.Text = "Login";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -166,7 +164,6 @@
             this.textBox2Password.Size = new System.Drawing.Size(332, 32);
             this.textBox2Password.TabIndex = 6;
             this.textBox2Password.Text = "password";
-            this.textBox2Password.TextChanged += new System.EventHandler(this.textBox2Password_TextChanged);
             // 
             // checkBox1
             // 
@@ -192,6 +189,7 @@
             this.button1LoginSucess.TabIndex = 8;
             this.button1LoginSucess.Text = "Login";
             this.button1LoginSucess.UseVisualStyleBackColor = false;
+            this.button1LoginSucess.Click += new System.EventHandler(this.button1LoginSucess_Click);
             // 
             // linkLabel1ToCreateAccount
             // 
@@ -221,7 +219,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1UserName);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "MainForm1OnStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
